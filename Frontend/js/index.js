@@ -4,7 +4,7 @@
    live yet (network error / 404), it silently falls back to local
    mock data so the UI keeps working while you build the backend.
 ===================================================================== */
-const API_BASE = "http://127.0.0.1:8000"; // e.g. "https://api.yourapp.com"
+const API_BASE = "https://expense-tracker-8bi2.onrender.com"; // e.g. "https://api.yourapp.com"
 
 const API = {
   getTransactions: `${API_BASE}/transactions/get_expense`,
@@ -161,12 +161,7 @@ document.addEventListener("click", (e) => {
 /* =====================================================================
    4. DATA LOADING — tries your API first, falls back to mock data.
 ===================================================================== */
-async function loadProfile() {
-  const data = await apiFetch(API.profile);
-  if (data) 
-    profile = data;
-  return profile;
-}
+
 async function loadTransactions() {
   const data = await apiFetch(API.getTransactions);
   if (data) 
@@ -191,6 +186,7 @@ async function deleteTransactionApi(id) {
 ===================================================================== */
 async function renderDashboard() {
   await loadTransactions();
+  
 
   const income = transactions.filter(t => t.category.type === "Income").reduce((s, t) => s + t.amount, 0);
   const expense = transactions.filter(t => t.category.type === "Expense").reduce((s, t) => s + t.amount, 0);
