@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
        messageEl.textContent = "Login successful! Redirecting...";
 
        setTimeout(() => {
-            window.location.href = "index.html";
+            window.location.href = "dashboard.html";
      }, 800);
     } catch (err) {
       messageEl.style.color = "#d93025";
