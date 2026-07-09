@@ -2,13 +2,13 @@
 // Handles the Register form submission and sends credentials to the backend API.
 
 // TODO: Replace with your actual backend endpoint (e.g. Django REST Framework route)
-const API_BASE_URL = "http://127.0.0.1:8000"; // <-- update to your deployed backend URL
+const API_BASE_URL = "https://expense-tracker-8bi2.onrender.com/"; // <-- update to your deployed backend URL
 const REGISTER_ENDPOINT = `${API_BASE_URL}/auth/register/`;
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const fullNameInput = document.getElementById("fullname");
-  const emailInput = document.getElementById("email");
+  const emailInput = document.getElementById("email");git 
   const passwordInput = document.getElementById("password");
   const confirmPasswordInput = document.getElementById("confirm-password");
   const termsCheckbox = document.querySelector(".terms-row input[type='checkbox']");
