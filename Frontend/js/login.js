@@ -3,7 +3,7 @@
 // and redirects to dashboard.html only if the API confirms they match.
 
 // TODO: Replace with your actual backend endpoint (e.g. Django REST Framework route)
-const API_BASE_URL = "";
+const API_BASE_URL = "https://expense-tracker-8bi2.onrender.com";
 const LOGIN_ENDPOINT = `${API_BASE_URL}/auth/login`;
 
 document.addEventListener("DOMContentLoaded", () => {
