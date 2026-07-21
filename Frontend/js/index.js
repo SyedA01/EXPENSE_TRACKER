@@ -8,7 +8,7 @@ const REGISTER_ENDPOINT = `${API_BASE_URL}/auth/register/`;
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const fullNameInput = document.getElementById("fullname");
-  const emailInput = document.getElementById("email");git 
+  const emailInput = document.getElementById("email");
   const passwordInput = document.getElementById("password");
   const confirmPasswordInput = document.getElementById("confirm-password");
   const termsCheckbox = document.querySelector(".terms-row input[type='checkbox']");
